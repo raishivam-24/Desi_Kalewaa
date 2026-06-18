@@ -1,0 +1,77 @@
+.dk-order-title {
+  font-size: clamp(28px, 4vw, 40px);
+}
+.dk-order-success-banner {
+  background: #3a5a40;
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.dk-order-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 36px;
+}
+@media (max-width: 900px) {
+  .dk-order-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .dk-order-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.dk-order-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 3px 12px rgba(92, 58, 33, 0.07);
+}
+.dk-order-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #f0e6d6;
+  flex-shrink: 0;
+}
+.dk-order-info {
+  flex: 1;
+}
+.dk-order-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3d2614;
+}
+.dk-order-price {
+  font-size: 13px;
+  color: #c56b3f;
+  font-weight: 600;
+}
+.dk-order-add-btn {
+  background: #3a5a40;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.dk-order-add-btn:hover {
+  opacity: 0.88;
+}
+.dk-order-cta-row {
+  display: flex;
+  justify-content: center;
+}

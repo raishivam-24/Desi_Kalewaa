@@ -1,0 +1,95 @@
+.dk-branches-title {
+  font-size: clamp(28px, 4vw, 40px);
+}
+.dk-branch-search-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 44px;
+}
+.dk-branch-search {
+  width: min(440px, 100%);
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(92, 58, 33, 0.25);
+  font-size: 14px;
+  font-family: "Hind", sans-serif;
+  outline: none;
+  background: #fff;
+}
+.dk-branch-search:focus {
+  border-color: #c56b3f;
+}
+.dk-branches-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+@media (max-width: 1000px) {
+  .dk-branches-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .dk-branches-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.dk-branch-card {
+  background: #fbf6ec;
+  border: 1px solid rgba(92, 58, 33, 0.12);
+  border-radius: 12px;
+  padding: 24px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.dk-branch-card:hover {
+  border-color: #c56b3f;
+  transform: translateY(-4px);
+}
+.dk-branch-name {
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  color: #3d2614;
+  margin-bottom: 4px;
+}
+.dk-branch-city {
+  font-size: 12px;
+  color: #c56b3f;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+.dk-branch-row {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(43, 27, 16, 0.7);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+.dk-branch-icon {
+  flex-shrink: 0;
+}
+.dk-branch-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(92, 58, 33, 0.1);
+}
+.dk-branch-call {
+  font-size: 13px;
+  color: #3a5a40;
+  font-weight: 700;
+  text-decoration: none;
+}
+.dk-branch-directions {
+  font-size: 13px;
+  color: #c56b3f;
+  font-weight: 700;
+  text-decoration: none;
+}
+.dk-branch-directions:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,71 @@
+.dk-footer {
+  background: #2b1b10;
+  color: rgba(247, 240, 227, 0.8);
+  padding: 56px 0 0;
+}
+.dk-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 36px;
+}
+@media (max-width: 700px) {
+  .dk-footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.dk-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.dk-footer-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.dk-footer-brand-name {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  color: #f7f0e3;
+}
+.dk-footer-tagline {
+  font-size: 13px;
+  color: rgba(247, 240, 227, 0.5);
+}
+.dk-footer-title {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e08a5c;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.dk-footer-link {
+  display: block;
+  background: none;
+  border: none;
+  text-align: left;
+  color: rgba(247, 240, 227, 0.6);
+  font-size: 13px;
+  padding: 5px 0;
+  cursor: pointer;
+  font-family: "Hind", sans-serif;
+}
+.dk-footer-link:hover {
+  color: #e08a5c;
+}
+.dk-footer-contact-item {
+  font-size: 13px;
+  color: rgba(247, 240, 227, 0.6);
+  padding: 4px 0;
+}
+.dk-footer-bottom {
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(247, 240, 227, 0.1);
+  text-align: center;
+  font-size: 12px;
+  color: rgba(247, 240, 227, 0.4);
+}

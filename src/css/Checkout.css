@@ -1,0 +1,71 @@
+.dk-checkout-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.dk-checkout-modal {
+  width: min(480px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fbf6ec;
+  border-radius: 14px;
+  padding: 28px;
+}
+.dk-checkout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.dk-checkout-header h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: #3d2614;
+}
+.dk-checkout-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #3d2614;
+}
+.dk-checkout-summary {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+.dk-checkout-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: rgba(43, 27, 16, 0.7);
+  padding: 4px 0;
+}
+.dk-checkout-total-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 700;
+  color: #3d2614;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(92, 58, 33, 0.12);
+}
+.dk-checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.dk-checkout-input {
+  background: #fff;
+}
+.dk-checkout-textarea {
+  min-height: 70px;
+  resize: vertical;
+}

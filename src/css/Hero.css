@@ -1,0 +1,89 @@
+.dk-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 110px 24px 60px;
+}
+.dk-hero-bg-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: radial-gradient(circle, rgba(197, 107, 63, 0.08) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  background-color: #f7f0e3;
+}
+.dk-hero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.dk-hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+.dk-hero-slide--active {
+  opacity: 0.18;
+}
+.dk-hero-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(247, 240, 227, 0.4) 0%, rgba(247, 240, 227, 0.85) 100%);
+}
+.dk-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dk-hero-logo {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  margin-bottom: 28px;
+  border-radius: 50%;
+}
+.dk-hero-title {
+  font-size: clamp(28px, 5vw, 46px);
+  color: #3d2614;
+  min-height: 70px;
+  margin-bottom: 18px;
+}
+.dk-hero-sub {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(43, 27, 16, 0.65);
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+.dk-hero-dishes-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.dk-hero-dish-pill {
+  padding: 7px 18px;
+  border-radius: 30px;
+  background: rgba(58, 90, 64, 0.08);
+  border: 1px solid rgba(58, 90, 64, 0.25);
+  color: #3a5a40;
+  font-size: 13px;
+  font-weight: 600;
+}
+.dk-hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

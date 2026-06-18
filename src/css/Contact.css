@@ -1,0 +1,57 @@
+.dk-contact-title {
+  font-size: clamp(28px, 4vw, 40px);
+}
+.dk-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 36px;
+}
+@media (max-width: 700px) {
+  .dk-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.dk-contact-card {
+  background: #fbf6ec;
+  border: 1px solid rgba(92, 58, 33, 0.12);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  text-decoration: none;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.dk-contact-card:hover {
+  border-color: #c56b3f;
+  transform: translateY(-4px);
+}
+.dk-contact-icon {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+.dk-contact-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(43, 27, 16, 0.5);
+  margin-bottom: 6px;
+}
+.dk-contact-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #3d2614;
+}
+.dk-contact-social {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.dk-contact-social a {
+  color: #c56b3f;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.dk-contact-social a:hover {
+  text-decoration: underline;
+}

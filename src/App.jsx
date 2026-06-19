@@ -86,7 +86,7 @@ export default function App() {
 
       <Reviews />
 
-      <Order cart={cart} addToCart={addToCart} updateQty={updateQty} isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
+      {/* <Order cart={cart} addToCart={addToCart} updateQty={updateQty} isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} /> */}
 
       <Contact />
 

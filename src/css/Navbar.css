@@ -9,7 +9,7 @@
   justify-content: space-between;
   gap: 28px;
   padding: 0 40px;
-  height: 76px;
+  height: 96px;
   background: rgba(247, 240, 227, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(92, 58, 33, 0.12);
@@ -27,8 +27,8 @@
   flex-shrink: 0;
 }
 .dk-brand-logo {
-  width: 46px;
-  height: 46px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   border-radius: 50%;
   flex-shrink: 0;
@@ -137,4 +137,12 @@
 }
 .dk-mobile-link--cta {
   color: #c56b3f;
+}
+.dk-brand-owner {
+  font-size: 10px;
+  color: #3a5a40;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 2px;
 }

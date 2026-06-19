@@ -69,3 +69,114 @@
   min-height: 70px;
   resize: vertical;
 }
+/* PAYMENT METHODS */
+
+.dk-payment-methods {
+  margin-top: 18px;
+}
+
+.dk-payment-methods h4 {
+  margin-bottom: 14px;
+  color: #3d2614;
+  font-size: 16px;
+}
+
+.pay-card {
+  border: 1px solid rgba(92, 58, 33, 0.15);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: #fff;
+}
+
+.pay-card:hover {
+  border-color: #c56b3f;
+  transform: translateY(-1px);
+}
+
+.pay-card.selected {
+  border-color: #c56b3f;
+  background: #fff8f3;
+  box-shadow: 0 4px 12px rgba(197, 107, 63, 0.12);
+}
+
+/* SUCCESS SCREEN */
+
+.order-success {
+  text-align: center;
+  padding: 24px 10px;
+}
+
+.success-icon {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.order-success h3 {
+  color: #3d2614;
+  margin-bottom: 10px;
+}
+
+.order-success p {
+  color: rgba(43, 27, 16, 0.7);
+  margin-bottom: 6px;
+}
+
+/* PRICE BREAKDOWN */
+
+.dk-checkout-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.dk-checkout-total-line {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(92, 58, 33, 0.15);
+  padding-top: 12px;
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* BETTER MODAL */
+
+.dk-checkout-modal {
+  width: min(550px, 95vw);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .dk-checkout-modal {
+    width: 95vw;
+  }
+
+  .pay-card {
+    padding: 12px;
+  }
+}
+.checkout-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.checkout-steps span {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  background: #eee;
+  margin: 0 4px;
+  border-radius: 8px;
+}
+
+.checkout-steps .active {
+  background: #c56b3f;
+  color: white;
+}

@@ -10,6 +10,7 @@ export default function Navbar({ activeNav, scrolled, menuOpen, setMenuOpen, scr
           <div>
             <div className="dk-brand-name">Desi Kalewaa</div>
             <div className="dk-brand-sub">माटी की खुशबू, परंपरा का स्वाद</div>
+            <div className="dk-brand-owner">By Nitish Sahu</div>
           </div>
         </div>
 
@@ -25,9 +26,9 @@ export default function Navbar({ activeNav, scrolled, menuOpen, setMenuOpen, scr
           ))}
         </div>
 
-        <button className="dk-nav-cta" onClick={() => scrollTo("order")}>
+        {/* <button className="dk-nav-cta" onClick={() => scrollTo("order")}>
           Order Now
-        </button>
+        </button> */}
 
         <button className="dk-hamburger" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? "✕" : "☰"}
@@ -41,9 +42,9 @@ export default function Navbar({ activeNav, scrolled, menuOpen, setMenuOpen, scr
               {l.label}
             </button>
           ))}
-          <button className="dk-mobile-link dk-mobile-link--cta" onClick={() => scrollTo("order")}>
+          {/* <button className="dk-mobile-link dk-mobile-link--cta" onClick={() => scrollTo("order")}>
             Order Now
-          </button>
+          </button> */}
         </div>
       )}
     </>

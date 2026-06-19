@@ -4,16 +4,21 @@ import "../css/Checkout.css";
 export default function Checkout({ cart, total, onClose, onSuccess }) {
   const [form, setForm] = useState({ name: "", phone: "", address: "", email: "" });
   const [loading, setLoading] = useState(false);
+  const [step, setStep] = useState(1);
+  const [paymentMethod, setPaymentMethod] = useState("upi");
 
   const update = (k, v) => setForm((p) => ({ ...p, [k]: v }));
 
-  const isValid = form.name && form.phone && form.address;
+  const isValid =
+    form.name.trim().length > 2 &&
+    /^[6-9]\d{9}$/.test(form.phone) &&
+    form.address.trim().length > 10;
 
   const handlePayment = async () => {
-    if (!isValid) return;
-    setLoading(true);
+  if (!isValid) return;
 
-    /*
+  setLoading(true);
+  /*
       ── RAZORPAY INTEGRATION ──
       1. Create an order on your backend (Node/Express, Firebase Function, etc.)
          that calls Razorpay's Orders API with your KEY_SECRET (never expose
@@ -47,12 +52,49 @@ export default function Checkout({ cart, total, onClose, onSuccess }) {
     */
 
     // Placeholder flow until backend order-creation endpoint is wired up:
-    setTimeout(() => {
-      setLoading(false);
-      onSuccess({ placeholder: true });
-    }, 1200);
-  };
 
+  try {
+    const options = {
+      key: import.meta.env.VITE_RAZORPAY_KEY,
+
+      amount: grandTotal * 100,
+
+      currency: "INR",
+
+      name: "Desi Kalewaa",
+
+      description: "Food Order",
+
+      image: "/logo.png",
+
+      prefill: {
+        name: form.name,
+        email: form.email,
+        contact: form.phone,
+      },
+
+      theme: {
+        color: "#C56B3F",
+      },
+      handler: function (response) {
+      setStep(3);
+      setLoading(false);
+      onSuccess(response);
+    },
+    };
+
+    const rzp = new window.Razorpay(options);
+
+    rzp.open();
+  } catch (err) {
+    console.log(err);
+  }
+
+  setLoading(false);
+};
+  const deliveryFee = total > 200 ? 0 : 30;
+  const gst = Math.round(total * 0.05);
+  const grandTotal = total + deliveryFee + gst;
   return (
     <div className="dk-checkout-overlay" onClick={onClose}>
       <div className="dk-checkout-modal" onClick={(e) => e.stopPropagation()}>
@@ -61,6 +103,13 @@ export default function Checkout({ cart, total, onClose, onSuccess }) {
           <button className="dk-checkout-close" onClick={onClose}>
             ✕
           </button>
+        </div>
+
+        {/* Progress Steps */}
+        <div className="checkout-steps">
+          <span className={step >= 1 ? "active" : ""}>Details</span>
+          <span className={step >= 2 ? "active" : ""}>Payment</span>
+          <span className={step >= 3 ? "active" : ""}>Done</span>
         </div>
 
         <div className="dk-checkout-summary">
@@ -78,7 +127,7 @@ export default function Checkout({ cart, total, onClose, onSuccess }) {
           </div>
         </div>
 
-        <div className="dk-checkout-form">
+        {step === 1 && (<div className="dk-checkout-form">
           <input
             className="dk-form-input dk-checkout-input"
             placeholder="Full Name"
@@ -103,16 +152,123 @@ export default function Checkout({ cart, total, onClose, onSuccess }) {
             value={form.address}
             onChange={(e) => update("address", e.target.value)}
           />
-        </div>
+        </div>)}
+        {step === 2 && (
+        <div className="dk-payment-methods">
 
+          <h4>Select Payment Method</h4>
+
+          <div
+            className={`pay-card ${
+              paymentMethod === "upi"
+                ? "selected"
+                : ""
+            }`}
+            onClick={() =>
+              setPaymentMethod("upi")
+            }
+          >
+            UPI
+          </div>
+
+          <div
+            className={`pay-card ${
+              paymentMethod === "card"
+                ? "selected"
+                : ""
+            }`}
+            onClick={() =>
+              setPaymentMethod("card")
+            }
+          >
+            Credit / Debit Card
+          </div>
+
+          <div
+            className={`pay-card ${
+              paymentMethod === "netbanking"
+                ? "selected"
+                : ""
+            }`}
+            onClick={() =>
+              setPaymentMethod(
+                "netbanking"
+              )
+            }
+          >
+            Net Banking
+          </div>
+
+          <div
+            className={`pay-card ${
+              paymentMethod === "cod"
+                ? "selected"
+                : ""
+            }`}
+            onClick={() =>
+              setPaymentMethod("cod")
+            }
+          >
+            Cash on Delivery
+          </div>
+
+        </div>
+        )}
+
+        {step === 3 && (
+        <div className="order-success">
+          <div className="success-icon">🎉</div>
+
+          <h3>Order Confirmed</h3>
+
+          <p>
+            Your order has been placed successfully.
+          </p>
+
+          <p>
+            Estimated delivery:
+            <strong> 30-45 mins</strong>
+          </p>
+
+          <p>
+            Order ID:
+            <strong>
+              DK{Math.floor(Math.random() * 100000)}
+            </strong>
+          </p>
+        </div>
+        )}
+
+        {step === 1 && (
         <button
           className="btn-primary"
-          style={{ width: "100%", marginTop: 8 }}
-          onClick={handlePayment}
-          disabled={!isValid || loading}
+          style={{
+            width: "100%",
+            marginTop: 8,
+          }}
+          onClick={() => setStep(2)}
+          disabled={!isValid}
         >
-          {loading ? "Processing..." : `Pay ₹${total} with Razorpay →`}
+          Continue To Payment →
         </button>
+        )}
+        {step === 2 && (
+        <button
+          className="btn-primary"
+          style={{
+            width: "100%",
+            marginTop: 8,
+          }}
+          onClick={handlePayment}
+          disabled={loading}
+        >
+          {
+            loading
+              ? "Processing..."
+              : `Pay ₹${grandTotal}`
+          }
+        </button>
+        )}
       </div>
     </div>
   );

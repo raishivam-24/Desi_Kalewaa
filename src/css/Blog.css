@@ -29,14 +29,15 @@
 }
 .dk-blog-img-wrap {
   width: 100%;
-  height: 160px;
-  background: #f0e6d6;
+  height: 240px;
   overflow: hidden;
 }
+
 .dk-blog-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 .dk-blog-body {
   padding: 20px;

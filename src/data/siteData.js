@@ -23,9 +23,9 @@ export const HERO_DISHES = [
   { name: "चीला", img: "/dishes/chila.jpg" },
   { name: "फरा", img: "/dishes/fara.jpg" },
   { name: "अंगाकर रोटी", img: "/dishes/angakar-roti.jpg" },
-  { name: "ठेठरी-खुरमी", img: "/dishes/thethri-khurmi.jpg" },
+  { name: "ठेठरी-खुरमी", img: "/dishes/khurmi.jpg" },
   { name: "बोरे बासी", img: "/dishes/bore-basi.jpg" },
-  { name: "देसी चावल", img: "/dishes/desi-rice.jpg" },
+  { name: "देसी चावल", img: "/dishes/dehrori.jpg" },
 ];
 
 export const ABOUT = {
@@ -135,13 +135,13 @@ export const DISHES = [
 ];
 
 /* ── BRANCHES — placeholder structure, replace with real data ── */
-export const BRANCHES = Array.from({ length: 15 }, (_, i) => ({
+export const BRANCHES = Array.from({ length: 1 }, (_, i) => ({
   id: `branch-${i + 1}`,
   name: `Desi Kalewaa - Branch ${i + 1}`,
-  city: "City Name",
-  address: "Address line, Area, City, Chhattisgarh - PIN",
+  city: "Bilaspur",
+  address: "Bilaspur, Chhattisgarh - PIN",
   timing: "10:00 AM - 10:00 PM",
-  phone: "+91 XXXXX XXXXX",
+  phone: "+91 95751 18022",
   parking: "Available",
   mapLink: "",
 }));
@@ -180,7 +180,6 @@ export const FRANCHISE_PROCESS = [
 export const GALLERY_CATEGORIES = ["Restaurant", "Food", "Customers", "Events"];
 
 export const GALLERY_IMAGES = [
-  // populate with { src: "/gallery/xyz.jpg", category: "Food" } once real photos are available
 ];
 
 export const BLOG_POSTS = [
@@ -219,8 +218,8 @@ export const REVIEWS = [
 ];
 
 export const CONTACT = {
-  phone: "+91 XXXXX XXXXX",
-  whatsapp: "+91 XXXXX XXXXX",
+  phone: "+91 9575118022 ",
+  whatsapp: "+91 9575118022",
   email: "hello@desikalewaa.in",
   social: {
     instagram: "",

@@ -200,11 +200,13 @@
   align-items: flex-start;
 }
 .dk-hero-logo {
-  width: 260px;
-  height: 260px;
-  object-fit: contain;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
   margin-bottom: 24px;
   border-radius: 50%;
+  overflow: hidden;
   filter: drop-shadow(0 6px 32px rgba(0,0,0,0.6));
 }
 .dk-hero-title {

@@ -78,7 +78,7 @@ export default function App() {
 
       <Branches />
 
-      <Franchise />
+      {/* <Franchise /> */}
 
       <Gallery />
 

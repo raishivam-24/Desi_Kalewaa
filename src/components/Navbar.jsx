@@ -18,7 +18,8 @@ export default function Navbar({ activeNav, scrolled, menuOpen, setMenuOpen, scr
           {NAV_LINKS.map((l) => (
             <button
               key={l.id}
-              className={`dk-nav-link${activeNav === l.id ? " dk-nav-link--active" : ""}`}
+              // used for hide franchise button in navbar as per client request, but can be easily enabled by removing the conditional class
+              className={`dk-nav-link${activeNav === l.id ? " dk-nav-link--active" : ""}${l.id === "franchise" ? " dk-nav-link--hidden" : ""}`}
               onClick={() => scrollTo(l.id)}
             >
               {l.label}

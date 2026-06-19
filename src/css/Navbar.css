@@ -27,11 +27,13 @@
   flex-shrink: 0;
 }
 .dk-brand-logo {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 50%;
   flex-shrink: 0;
+  overflow: hidden;
 }
 .dk-brand-name {
   font-family: "Playfair Display", serif;
@@ -145,4 +147,8 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-top: 2px;
+}
+/* CSS used for hide franchies button */
+.dk-nav-link--hidden {
+  display: none;
 }

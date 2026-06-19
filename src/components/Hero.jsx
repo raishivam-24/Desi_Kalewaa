@@ -31,10 +31,13 @@ export default function Hero({ scrollTo }) {
     <div className="dk-hero-content">
       <img src="/logo.png" alt="Desi Kalewaa" className="dk-hero-logo" />
       <h1 className="dk-hero-title heading-hindi">{TAGLINES[taglineIdx]}</h1>
+      <p className="dk-hero-coming-soon">
+        <span className="dk-hero-coming-soon-dot" />
+        Coming soon in Bilaspur, Chhattisgarh
+      </p>
       <p className="dk-hero-sub">
         Authentic Chhattisgarhi cuisine, made with tradition, love, and the freshest local ingredients.
       </p>
-
       <div className="dk-hero-dishes-row">
         {HERO_DISHES.map((d, i) => (
           <span key={i} className="dk-hero-dish-pill">{d.name}</span>

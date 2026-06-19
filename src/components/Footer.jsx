@@ -30,7 +30,7 @@ export default function Footer({ scrollTo }) {
           </div>
         </div>
 
-        <div className="dk-footer-bottom">© 2026 Desi Kalewaa. All rights reserved.</div>
+        <div className="dk-footer-bottom">© 2026 Desi Kalewaa, by Nitish Sahu. All rights reserved.</div>
       </div>
     </footer>
   );

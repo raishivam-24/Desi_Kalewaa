@@ -91,8 +91,6 @@ export default function App() {
 
       <About />
 
-      <Certifications />
-
       <Menu addToCart={addToCart} />
 
       <Branches />
@@ -106,6 +104,8 @@ export default function App() {
       <Reviews />
 
       {/* <Order cart={cart} addToCart={addToCart} updateQty={updateQty} isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} /> */}
+
+      <Certifications />
 
       <Contact />
 

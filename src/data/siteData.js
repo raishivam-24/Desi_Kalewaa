@@ -8,9 +8,10 @@ export const NAV_LINKS = [
   { label: "About", id: "about" },
   { label: "Menu", id: "menu" },
   { label: "Branches", id: "branches" },
-  { label: "Franchise", id: "franchise" },
+  // { label: "Franchise", id: "franchise" },
   { label: "Gallery", id: "gallery" },
   { label: "Blog", id: "blog" },
+  { label: "Certificates", id: "certifications" },
   { label: "Contact", id: "contact" },
 ];
 

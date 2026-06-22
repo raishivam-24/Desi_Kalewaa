@@ -4,6 +4,7 @@ import "./css/Common.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Certifications from "./components/Certifications";
 import Menu from "./components/Menu";
 import Branches from "./components/Branches";
 import Franchise from "./components/Franchise";
@@ -89,6 +90,8 @@ export default function App() {
       <Hero scrollTo={scrollTo} />
 
       <About />
+
+      <Certifications />
 
       <Menu addToCart={addToCart} />
 
